@@ -1,0 +1,28 @@
+#Autor: Samuel Križan (xkriza06)
+#Názov: Filtrující DNS resolver
+
+# Popis programu
+Program funguje na princípe DNS servera, ktorý prijme DNS dotaz a preženie ho cez filter blokovaných adries.
+V prípade, že je daná adresa medzi blokovanými, pošle sa späť chybová správa.
+V opačnom prípade bude dotaz preposlaný reálnemu resolveru a jeho odpoveď bude následne preposlaná inicializátorovi dotazu. 
+
+# Preloženie
+- príkaz: make
+
+# Spustenie
+./dns -s server [-p port] -f filter_file
+    • server = ip adresa/doménové meno DNS servera, kam sa majú dotazy preposielať
+    • port = číslo portu, na ktorom sa budú zachytávať dotazy, predvolené je 53
+    • filter_file = názov súboru, v ktorom sú blokované domény
+
+# Zoznam odovzdaných súborov
+* dns.cpp
+* server.cpp
+* client.cpp
+* sideFnc.cpp
+* loadFile.cpp
+* params.cpp
+* head.hpp
+* Makefile
+* manual.pdf
+* README
